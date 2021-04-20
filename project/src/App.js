@@ -69,7 +69,13 @@ class App extends React.Component {
           Toggle cars
         </button>
 
-        { cars }
+        <div style={{
+          width: 400,
+          margin: 'auto',
+          paddingTop: '10px'
+        }}>
+          { cars }
+        </div>
 
       </div>
     );
