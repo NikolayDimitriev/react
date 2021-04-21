@@ -5,6 +5,7 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props)
+    console.log('App constructor')
     this.state = {
       cars: [
         {
@@ -45,7 +46,16 @@ class App extends React.Component {
     this.setState({cars})
   }
   
+  componentDidMount() {
+    console.log('App componentDidMount');
+  }
+
+  componentWillUnmount() {
+    console.log('App componentWillUnmount');
+  }
+
   render() {
+    console.log('App render');
     let cars = null
 
     if (this.state.showCars) {
