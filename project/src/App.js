@@ -45,14 +45,7 @@ class App extends React.Component {
     cars.splice(index, 1)
     this.setState({cars})
   }
-  
-  componentDidMount() {
-    console.log('App componentDidMount');
-  }
 
-  componentWillUnmount() {
-    console.log('App componentWillUnmount');
-  }
 
   render() {
     console.log('App render');

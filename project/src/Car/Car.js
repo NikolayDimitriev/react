@@ -3,6 +3,29 @@ import Radium from 'radium'
 import React from 'react';
 
 class Car extends React.Component {
+    
+    static getDerivedStateFromProps(props, state) {
+        console.log("getDerivedStateFromProps()");
+        return null;
+    }
+    componentDidMount(){
+        console.log("componentDidMount()");
+    }
+    componentWillUnmount(){
+        console.log("componentWillUnmount()");
+    }
+    shouldComponentUpdate(){
+        console.log("shouldComponentUpdate()");
+        return true;
+    }
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log("getSnapshotBeforeUpdate()");
+        return null;
+    }
+    componentDidUpdate(){
+        console.log("componentDidUpdate()");
+    }
+
     render() {
         const inputClasses = ['input'];
         if (this.props.name !== '') {
