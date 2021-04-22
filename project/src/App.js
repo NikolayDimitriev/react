@@ -2,6 +2,7 @@ import React from 'react'
 import Car from './Car/Car.js'
 import './App.css';
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary.js';
+import Counter from './Counter/Counter.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -69,8 +70,11 @@ class App extends React.Component {
 
     return(
       <div style={{textAlign: 'center'}} className="App">
-
         <h1>{this.props.title}</h1>
+
+        <Counter />
+
+        <hr></hr>
 
         <button 
           onClick={this.toggleCarsHandler}>
@@ -86,6 +90,8 @@ class App extends React.Component {
         </div>
 
       </div>
+
+      
     );
   }
 }
