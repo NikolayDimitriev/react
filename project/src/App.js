@@ -58,6 +58,7 @@ class App extends React.Component {
             <Car 
               name = {car.name}
               year = {car.year}
+              index = {index}
               onDelete = {this.deleteHandler.bind(this, index)}
               onChangeName = {event => this.onChangeName(event.target.value, index)}
             />
