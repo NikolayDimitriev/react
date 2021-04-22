@@ -4,6 +4,8 @@ import './App.css';
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary.js';
 import Counter from './Counter/Counter.js';
 
+export const ClickedContext = React.createContext(false)
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -22,8 +24,8 @@ class App extends React.Component {
           year: 2010
         }
       ], 
-      pageTitle: 'React components',
-      showCars: false
+      showCars: false,
+      clicked: false
     };
   }
 
@@ -71,7 +73,9 @@ class App extends React.Component {
       <div style={{textAlign: 'center'}} className="App">
         <h1>{this.props.title}</h1>
 
-        <Counter />
+        <ClickedContext.Provider value={this.state.clicked}>
+          <Counter />
+        </ClickedContext.Provider>
 
         <hr></hr>
 
@@ -79,6 +83,8 @@ class App extends React.Component {
           onClick={this.toggleCarsHandler}>
           Toggle cars
         </button>
+
+        <button onClick={() => {this.setState({clicked: true})}}>Change Clicked</button>
 
         <div style={{
           width: 400,
