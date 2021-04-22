@@ -7,7 +7,6 @@ import Counter from './Counter/Counter.js';
 class App extends React.Component {
   constructor(props) {
     super(props)
-    console.log('App constructor')
     this.state = {
       cars: [
         {
@@ -50,7 +49,6 @@ class App extends React.Component {
 
 
   render() {
-    console.log('App render');
     let cars = null
 
     if (this.state.showCars) {
